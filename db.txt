@@ -1,0 +1,4 @@
+host: localhost
+db: db_crud_usuario
+user: postgres
+pass: Info@3004
