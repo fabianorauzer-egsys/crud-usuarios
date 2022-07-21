@@ -1,11 +1,12 @@
 <?= $this->doctype() ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <?= $this->headTitle('CRUD')->setSeparator(' - ')->setAutoEscape(false) ?>
-    
+    <?= $this->headTitle('ZF3 - CRUD')->setSeparator(' - ')->setAutoEscape(false) ?>
+
     <?= $this->headMeta()
         ->appendName('viewport', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
     ?>
@@ -19,121 +20,122 @@
         ->prependStylesheet($this->basePath('css/font-awesome.min.css'))
         ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
     ?>
-    
+
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-    
+
 </head>
+
 <body class="hold-transition skin-blue sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper">
+    <!-- Site wrapper -->
+    <div class="wrapper">
 
-    <header class="main-header">
-        <!-- Logo -->
-        <a href="dashboard.html" class="logo">
-            <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>CRUD</b></span>
-            <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>ZF3</b> CRUD</span>
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top">
-            <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="dashboard.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>c</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>ZF3</b> CRUD</span>
             </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
 
-            <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
 
-                    <!-- User Account: style can be found in dropdown.less -->
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Imag">
-                            <span class="hidden-xs"></span>
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Imag">
+                                <span class="hidden-xs"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                                    <p>
+                                        Alexander Pierce
+                                    </p>
+                                </li>
+
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-right">
+                                        <a href="login.html" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- =============================================== -->
+
+        <!-- Left side column. contains the sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="header">NAVEGAÇÃO PRINCIPAL</li>
+
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <!-- User image -->
-                            <li class="user-header">
-                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                                <p>
-                                    Alexander Pierce
-                                </p>
-                            </li>
-
-                            <!-- Menu Footer-->
-                            <li class="user-footer">
-                                <div class="pull-right">
-                                    <a href="login.html" class="btn btn-default btn-flat">Sign out</a>
-                                </div>
-                            </li>
-                        </ul>
                     </li>
+
+                    <li>
+                        <a href="plus.html">
+                            <i class="fa fa-plus"></i> <span>Novo Ticket</span>
+                        </a>
+                    </li>
+
                 </ul>
-            </div>
-        </nav>
-    </header>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
 
-    <!-- =============================================== -->
+        <!-- =============================================== -->
 
-    <!-- Left side column. contains the sidebar -->
-    <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-
-            <!-- sidebar menu: : style can be found in sidebar.less -->
-            <ul class="sidebar-menu" data-widget="tree">
-                <li class="header">MAIN NAVIGATION</li>
-
-                <li>
-                    <a href="dashboard.html">
-                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="plus.html">
-                        <i class="fa fa-plus"></i> <span>Novo Ticket</span>
-                    </a>
-                </li>
-
-            </ul>
-        </section>
-        <!-- /.sidebar -->
-    </aside>
-
-    <!-- =============================================== -->
-
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <?= $this->content ?>
-    </div>
-    <!-- /.content-wrapper -->
-
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.4.0
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <?= $this->content ?>
         </div>
-        <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-        reserved.
-    </footer>
-</div>
-<!-- ./wrapper -->
+        <!-- /.content-wrapper -->
 
-<!-- Scripts -->
-<?= $this->headScript()
-    ->prependFile($this->basePath('dist/js/adminlte.min.js'))
-    ->prependFile($this->basePath('js/fastclick/lib/fastclick.js'))
-    ->prependFile($this->basePath('js/jquery-slimscroll/jquery.slimscroll.min.js'))
-    ->prependFile($this->basePath('js/jquery-3.3.1.min.js'))
-    ->prependFile($this->basePath('js/bootstrap.min.js'))
-    ->prependFile($this->basePath('js/jquery.min.js'))
-?>
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.4.0
+            </div>
+            <strong>Template desenvolvido por &copy; <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> Todos os direitos reservados.
+        </footer>
+    </div>
+    <!-- ./wrapper -->
 
-<?= $this->inlineScript() ?>
+    <!-- Scripts -->
+    <?= $this->headScript()
+        ->prependFile($this->basePath('dist/js/adminlte.min.js'))
+        ->prependFile($this->basePath('js/fastclick/lib/fastclick.js'))
+        ->prependFile($this->basePath('js/jquery-slimscroll/jquery.slimscroll.min.js'))
+        ->prependFile($this->basePath('js/jquery-3.3.1.min.js'))
+        ->prependFile($this->basePath('js/bootstrap.min.js'))
+        ->prependFile($this->basePath('js/jquery.min.js'))
+    ?>
+
+    <?= $this->inlineScript() ?>
 </body>
+
 </html>
