@@ -76,6 +76,10 @@ class ComposerStaticInita3119ec09ab98af50c89260ecff08e8f
         array (
             'Interop\\Container\\' => 18,
         ),
+        'C' => 
+        array (
+            'Core\\' => 5,
+        ),
         'A' => 
         array (
             'Application\\' => 12,
@@ -275,6 +279,10 @@ class ComposerStaticInita3119ec09ab98af50c89260ecff08e8f
         'Interop\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
+        ),
+        'Core\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/module/Core/src',
         ),
         'Application\\' => 
         array (
