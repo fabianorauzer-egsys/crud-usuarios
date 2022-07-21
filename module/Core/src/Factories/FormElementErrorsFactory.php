@@ -9,26 +9,26 @@ use Zend\ServiceManager\Factory\FactoryInterface;
 class FormElementErrorsFactory implements FactoryInterface
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
-    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $helpers = new FormElementErrors();
+        $helper = new FormElementErrors();
 
         $config = $container->get('config');
         if (isset($config['view_helper_config']['form_element_errors'])) {
             $configHelper = $config['view_helper_config']['form_element_errors'];
             if (isset($configHelper['message_open_format'])) {
-                $helpers->setMessageOpenFormat($configHelper['message_open_format']);
+                $helper->setMessageOpenFormat($configHelper['message_open_format']);
             }
             if (isset($configHelper['message_separator_string'])) {
-                $helpers->setMessageSeparatorString($configHelper['message_separator_string']);
+                $helper->setMessageSeparatorString($configHelper['message_separator_string']);
             }
             if (isset($configHelper['message_close_string'])) {
-                $helpers->setMessageCloseString($configHelper['message_close_string']);
+                $helper->setMessageCloseString($configHelper['message_close_string']);
             }
         }
 
-        return $helpers;
+        return $helper;
     }
 }

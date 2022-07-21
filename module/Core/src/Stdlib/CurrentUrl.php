@@ -9,7 +9,7 @@ trait CurrentUrl
     public function getUrl(RequestInterface $request)
     {
         $protocol = 'http://';
-        if ($request->getServer('HTTPS') != null ) {
+        if ($request->getServer('HTTPS') != null) {
             $protocol = 'https://';
         }
 

@@ -22,8 +22,8 @@ return [
     'Zend\Mvc\I18n',
     'Zend\Mvc\Console',
     'Zend\Form',
-    'Zend\Hydrator',
     'Zend\InputFilter',
+    'Zend\Hydrator',
     'Zend\Filter',
     'Zend\I18n',
     'Zend\Cache',
@@ -31,5 +31,7 @@ return [
     'Zend\Router',
     'Zend\Validator',
     'Core',
+    'User',
+    'Auth',
     'Application',
 ];
